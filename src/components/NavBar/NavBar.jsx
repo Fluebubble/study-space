@@ -1,6 +1,6 @@
 import { NavItem } from 'components/NavItem/NavItem';
 
-export const NavBar = () => {
+export const NavBar = ({ children }) => {
   return (
     <div
       style={{

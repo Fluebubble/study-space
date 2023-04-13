@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { Navigation } from './Codewars.styled';
+import Navigation from '../../Navigation/Navigation';
 
 const Codewars = () => {
   return (
@@ -12,7 +12,10 @@ const Codewars = () => {
           <li>
             <NavLink to="task2">Task 2</NavLink>
           </li>
-          <li>Task 3</li>
+          <li>
+            <NavLink to="task3">Task 3</NavLink>
+          </li>
+          <li>Task 4</li>
         </ul>
       </Navigation>
       <div>
