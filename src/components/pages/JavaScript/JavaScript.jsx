@@ -14,10 +14,10 @@ const JavaScript = () => {
             <NavLink to="module-6">Module 6</NavLink>
           </li>
           <li>
-            <NavLink to="module-6">Module 7</NavLink>
+            <NavLink to="module-7">Module 7</NavLink>
           </li>
           <li>
-            <NavLink to="module-6">Module 8</NavLink>
+            <NavLink to="module-8">Module 8</NavLink>
           </li>
           <li>Task 4</li>
         </ul>

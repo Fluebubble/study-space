@@ -7,8 +7,10 @@ import { Task3 } from './pages/Codewars/Task3/Task3';
 import { Task4 } from './pages/Codewars/Task4/Task4';
 import JavaScript from './pages/JavaScript/JavaScript';
 import { Module6 } from './pages/JavaScript/Module6/Module6';
+import { Module7 } from './pages/JavaScript/Module7/Module7';
 import NodeJs from './pages/NodeJs/NodeJs';
 import React from './pages/React/React';
+import { Task5 } from './pages/Codewars/Task5/Task5';
 
 export const App = () => {
   return (
@@ -21,9 +23,11 @@ export const App = () => {
             <Route path="task2" element={<Task2 />} />
             <Route path="task3" element={<Task3 />} />
             <Route path="task4" element={<Task4 />} />
+            <Route path="task5" element={<Task5 />} />
           </Route>
           <Route path="javascript" element={<JavaScript />}>
             <Route path="module-6" element={<Module6 />} />
+            <Route path="module-7" element={<Module7 />} />
           </Route>
           <Route path="react" element={<React />} />
 

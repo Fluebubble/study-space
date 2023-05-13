@@ -20,7 +20,8 @@ export const Module6 = () => {
     // console.log(numberOfCategories[0].childNodes.length);
   }, []);
 
-  return (
+  return (<>
+    <a href="https://www.edu.goit.global/ru/learn/5329046/2294/2300/homework">HOMEWORK TASK LINK</a>
     <ul id="categories">
       <li className="item">
         <h2>Animals</h2>
@@ -49,6 +50,6 @@ export const Module6 = () => {
           <li>Node.js</li>
         </ul>
       </li>
-    </ul>
+    </ul></>
   );
 };

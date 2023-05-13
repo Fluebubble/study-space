@@ -20,11 +20,12 @@ export const Task1 = () => {
   return (
     <>
       <h2>Codewars Task 1</h2>
-      <h3>{text}</h3>
+      <a href="https://www.codewars.com/kata/5390bac347d09b7da40006f6">Task link</a>
       <form onSubmit={handleSubmit}>
         <input type="text" name="text" />
         <button type="submit">START</button>
       </form>
+      <h3>{text}</h3>
     </>
   );
 };
