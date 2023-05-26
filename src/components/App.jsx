@@ -11,6 +11,7 @@ import { Module7 } from './pages/JavaScript/Module7/Module7';
 import NodeJs from './pages/NodeJs/NodeJs';
 import React from './pages/React/React';
 import { Task5 } from './pages/Codewars/Task5/Task5';
+import { Task6 } from './pages/Codewars/Task6/Task6';
 
 export const App = () => {
   return (
@@ -24,6 +25,7 @@ export const App = () => {
             <Route path="task3" element={<Task3 />} />
             <Route path="task4" element={<Task4 />} />
             <Route path="task5" element={<Task5 />} />
+            <Route path="task6" element={<Task6 />} />
           </Route>
           <Route path="javascript" element={<JavaScript />}>
             <Route path="module-6" element={<Module6 />} />
