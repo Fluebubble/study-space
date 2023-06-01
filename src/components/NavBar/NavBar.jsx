@@ -9,10 +9,7 @@ export const NavBar = ({ children }) => {
         backgroundColor: '#5887FF',
       }}
     >
-      <NavItem to="/codewars">Codewars</NavItem>
-      <NavItem to="/javascript">JavaScript</NavItem>
-      <NavItem to="/react">React</NavItem>
-      <NavItem to="/nodejs">NodeJS</NavItem>
+      {children}
     </div>
   );
 };

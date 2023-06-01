@@ -1,3 +1,5 @@
+import { NavBar } from 'components/NavBar/NavBar';
+import { NavItem } from 'components/NavItem/NavItem';
 import { useEffect } from 'react';
 
 export const Module6 = () => {
@@ -20,36 +22,46 @@ export const Module6 = () => {
     // console.log(numberOfCategories[0].childNodes.length);
   }, []);
 
-  return (<>
-    <a href="https://www.edu.goit.global/ru/learn/5329046/2294/2300/homework">HOMEWORK TASK LINK</a>
-    <ul id="categories">
-      <li className="item">
-        <h2>Animals</h2>
-        <ul>
-          <li>Cat</li>
-          <li>Hamster</li>
-          <li>Horse</li>
-          <li>Parrot</li>
-        </ul>
-      </li>
-      <li className="item">
-        <h2>Products</h2>
-        <ul>
-          <li>Bread</li>
-          <li>Prasley</li>
-          <li>Cheese</li>
-        </ul>
-      </li>
-      <li className="item">
-        <h2>Technologies</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-        </ul>
-      </li>
-    </ul></>
+  return (
+    <>
+      <NavBar>
+        <NavItem to="/codewars">Module 6</NavItem>
+        <NavItem to="/javascript">JavaScript</NavItem>
+        <NavItem to="/react">React</NavItem>
+        <NavItem to="/nodejs">NodeJS</NavItem>
+      </NavBar>
+      <a href="https://www.edu.goit.global/ru/learn/5329046/2294/2300/homework">
+        HOMEWORK TASK LINK
+      </a>
+      <ul id="categories">
+        <li className="item">
+          <h2>Animals</h2>
+          <ul>
+            <li>Cat</li>
+            <li>Hamster</li>
+            <li>Horse</li>
+            <li>Parrot</li>
+          </ul>
+        </li>
+        <li className="item">
+          <h2>Products</h2>
+          <ul>
+            <li>Bread</li>
+            <li>Prasley</li>
+            <li>Cheese</li>
+          </ul>
+        </li>
+        <li className="item">
+          <h2>Technologies</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+          </ul>
+        </li>
+      </ul>
+    </>
   );
 };

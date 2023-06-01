@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 
 export const Module7 = () => {
-  const ingredientList = document.querySelector('#ingredients');
+  // console.log(ingredientList);
 
   useEffect(() => {
+    const ingredientList = document.querySelector('#ingredients');
     const ingredients = [
       'Potatoes',
       'Mushrooms',
@@ -18,7 +19,7 @@ export const Module7 = () => {
       console.log(element);
       ingredientList.append(newTagLine);
     }
-  }, [ingredientList]);
+  }, []);
 
   return <ul id="ingredients"></ul>;
 };
