@@ -16,6 +16,7 @@ import { Task6 } from './pages/Codewars/Task6/Task6';
 import { Task7 } from './pages/Codewars/Task7/Task7';
 import { JsTask2 } from './pages/JavaScript/Module6/Tasks/Task2';
 import { Task8 } from './pages/Codewars/Task8/Task8';
+import { JsTask3 } from './pages/JavaScript/Module6/Tasks/Task3';
 
 export const App = () => {
   return (
@@ -37,6 +38,7 @@ export const App = () => {
             <Route path="module-6" element={<Module6 />}>
               <Route path="task1" element={<JsTask1 />} />
               <Route path="task2" element={<JsTask2 />} />
+              <Route path="task3" element={<JsTask3 />} />
             </Route>
             <Route path="module-7" element={<Module7 />} />
           </Route>

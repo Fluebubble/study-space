@@ -25,14 +25,23 @@ export const JsTask2 = () => {
 
     gallery.insertAdjacentHTML(
       'afterbegin',
-      `<ul><li><img src="${images[0].url}" alt="${images[0].alt}" style="width: 460px"></li><li><img src="${images[1].url}" alt="${images[1].alt}" style="width: 460px"></li><li><img src="${images[2].url}" alt="${images[2].alt}" style="width: 460px"></li></ul>`
+      `<ul>
+        <li>
+          <img src="${images[0].url}" alt="${images[0].alt}" style="width: 460px">
+        </li>
+        <li>
+          <img src="${images[1].url}" alt="${images[1].alt}" style="width: 460px">
+        </li>
+        <li>
+          <img src="${images[2].url}" alt="${images[2].alt}" style="width: 460px">
+        </li>
+      </ul>`
     );
   }, []);
 
   return (
     <>
-      <ul className="gallery">
-      </ul>
+      <ul className="gallery"></ul>
     </>
   );
 };
