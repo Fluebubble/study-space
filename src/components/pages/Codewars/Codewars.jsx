@@ -36,6 +36,9 @@ const Codewars = () => {
           <li>
             <NavLink to="task10">Task 10</NavLink>
           </li>
+          <li>
+            <NavLink to="task11">Task 11</NavLink>
+          </li>
         </ul>
       </Navigation>
       <div>
