@@ -5,10 +5,14 @@ export const Task11 = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const regex = /[^\w']/g;
-    const str = e.target.text.value.replace(regex, ' ');
+    const str = e.target.text.value.toLowerCase().trim().replace(regex, ' ');
+    
+    if(!/[a-zA-Z]/.test(str)){
+      return []
+    }
+
     const arr = str.split(' ');
-    const newArr = [];
-    console.log(arr);
+    console.log(!arr.includes(/[^\w']/g));
     const wordCount = {
       // word1: 'word1value',
       // word2: 'word2value',
@@ -16,8 +20,8 @@ export const Task11 = () => {
       // word4: 'word4value',
     };
 
-    console.log(wordCount['word1']);
-    console.log(Object.keys(wordCount).includes('word11'));
+    // console.log(wordCount['word1']);
+    // console.log(Object.keys(wordCount).includes('word11'));
     arr.forEach(word => {
       if (word !== '') {
         if (Object.keys(wordCount).includes(word)) {
