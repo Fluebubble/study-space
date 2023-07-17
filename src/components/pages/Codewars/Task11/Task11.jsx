@@ -4,12 +4,11 @@ export const Task11 = () => {
   const [text, setText] = useState('');
   const handleSubmit = e => {
     e.preventDefault();
+    if (!/[a-zA-Z]/.test(e.target.text.value)) {
+      return [];
+    }
     const regex = /[^\w']/g;
     const str = e.target.text.value.toLowerCase().trim().replace(regex, ' ');
-    
-    if(!/[a-zA-Z]/.test(str)){
-      return []
-    }
 
     const arr = str.split(' ');
     console.log(!arr.includes(/[^\w']/g));
@@ -39,13 +38,14 @@ export const Task11 = () => {
     );
 
     console.log(sortedWords.slice(0, 3));
+    setText(sortedWords.slice(0, 3));
   };
 
   return (
     <>
       <h2>Codewars Task 11</h2>
       <h3>{text}</h3>
-      <a href="https://www.codewars.com/kata/decode-the-morse-code">
+      <a href="https://www.codewars.com/kata/51e056fe544cf36c410000fb/train/javascript">
         Task link
       </a>
       <form onSubmit={handleSubmit}>
