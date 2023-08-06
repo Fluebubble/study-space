@@ -2,6 +2,9 @@ import { useState } from 'react';
 
 export const Task15 = () => {
   const [text, setText] = useState('');
+  // const kekArr = [1, 2, 3, 4, 5, 6, 7];
+  // console.log(kekArr.splice(3, 1));
+  // console.log(kekArr);
   const handleSubmit = e => {
     e.preventDefault();
     const string = e.target.text.value;
@@ -10,32 +13,58 @@ export const Task15 = () => {
       const newArr = [...arr];
       const deletedElements = [];
       let currentElementPosition = 0;
+      let currentCircleArrLength = newArr.length;
+      let currentShag = 0;
 
-      while (newArr.length !== 0) {
-        // for (let i = 0; newArr.length; i++) {
-        // console.log('currentElementPosition ' + currentElementPosition);
-        if (currentElementPosition < newArr.length) {
-          currentElementPosition += shag;
+      // while (newArr.length !== 0) {
+      for (let i = 0; i < 15; i++) {
+        console.log(newArr);
+        console.log('newArr.length' + newArr.length);
+        console.log('currentCircleArrLength' + currentCircleArrLength);
+        currentShag += shag;
+        console.log('currentShag ' + currentShag);
+        // let oldLengthOfArr = newArr.length;
+        const currentDelElSum = deletedElements.length;
+        if (currentShag < currentCircleArrLength) {
           console.log('if');
-          console.log('currentElementPosition ' + currentElementPosition);
-          deletedElements.push(
-            newArr[currentElementPosition - 1 - deletedElements.length]
-          );
-          console.log('newArr = ' + newArr);
-          newArr.splice(
-            currentElementPosition - 1 - (deletedElements.length - 1),
-            1
-          );
+          deletedElements.push(newArr[currentShag - 1 - currentDelElSum]);
+          newArr.splice(currentShag - 1 - currentDelElSum, 1); // удаляем элемент из основного массива с указанной позицией
+          console.log('currentShag ' + currentShag);
         } else {
           console.log('else');
-          // currentElementPosition += shag;
-          currentElementPosition =
-            shag - (currentElementPosition % newArr.length);
-          console.log('currentElementPosition ' + currentElementPosition);
-          deletedElements.push(newArr[currentElementPosition - 1]);
-          console.log('newArr = ' + newArr);
-          newArr.splice(currentElementPosition - 1, 1);
+          currentShag -= currentCircleArrLength;
+          console.log(currentShag);
+          deletedElements.push(newArr[currentShag - 1]);
+          console.log('currentShag ' + currentShag);
+          newArr.splice(currentShag - 1 - currentDelElSum, 1); // удаляем элемент из основного массива с указанной позицией
+          currentCircleArrLength = newArr.length;
         }
+
+        // if (currentElementPosition < newArr.length) {
+        //   currentElementPosition += shag; // если текущая позиция элемента меньше длины массива, то увеличиваем её на указанный шаг
+        //   console.log('if');
+        //   console.log('currentElementPosition ' + currentElementPosition);
+        //   deletedElements.push(
+        //     newArr[currentElementPosition - 1 - deletedElements.length]
+        //   ); // добавляем массив с удаленными элементами из основного массива элемент с указанной позицией
+        //   console.log('newArr = ' + newArr);
+        //   newArr.splice(currentElementPosition - deletedElements.length, 1); // удаляем элемент из основного массива с указанной позицией
+        // } else {
+        //   console.log('else');
+        //   // console.log(newArr.length);
+        //   // currentElementPosition += shag;
+        //   console.log(
+        //     `currentElementPosition(${currentElementPosition}) = shag(${shag})-currentElementPosition(${currentElementPosition})%newArr.length(${newArr.length})`
+        //   );
+        //   currentElementPosition = shag - (newArr.length % shag);
+        //   // (newArr.length % currentElementPosition) - shag;
+        //   // shag - deletedElements.length;
+        //   console.log('currentElementPosition ' + currentElementPosition);
+        //   deletedElements.push(newArr[currentElementPosition - 1]);
+        //   console.log('newArr = ' + newArr);
+        //   newArr.splice(currentElementPosition - 1, 1);
+        // }
+
         // console.log(currentElementPosition - 1 - deletedElements.length);
         console.log('deleted = ' + deletedElements);
         console.log('newArr = ' + newArr);
